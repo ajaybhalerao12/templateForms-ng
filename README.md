@@ -1,7 +1,7 @@
 # TemplateForms-NG
 
 ## Overview
-This repository is a comprehensive guide to learning and implementing template-driven forms in Angular. The project includes a range of examples and exercises to help developers understand the intricacies of template-driven forms in Angular.
+This repository is a comprehensive guide to learning and implementing template-driven forms in Angular. The project includes a range of examples and exercises to help developers understand the intricacies of template-driven forms in Angular.This project was generated with Angular CLI version 18.2.10.
 
 ## Features
 - **Template-Driven Forms**: In-depth examples and explanations of template-driven forms in Angular.
