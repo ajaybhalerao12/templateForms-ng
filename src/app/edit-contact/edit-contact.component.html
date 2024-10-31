@@ -95,10 +95,12 @@
     <section>
       <nav>Address</nav>
       <div>
-        <div class="address" ngModelGroup="address">
+        <div class="address" ngModelGroup="address" #addressGroup="ngModelGroup"
+        [class.error]="addressGroup.invalid && addressGroup.touched">
           <div class="flex-group">
             <input
               placeholder="Address"
+              required="true"
               [(ngModel)]="contact.address.streetAddress"
               name="streetAddress"
             />
@@ -106,16 +108,19 @@
           </div>
           <input
             placeholder="City"
+            required="true"
             [(ngModel)]="contact.address.city"
             name="city"
           />
           <input
             placeholder="State/Region"
+            required="true"
             [(ngModel)]="contact.address.state"
             name="state"
           />
           <input
             placeholder="Zip/Postal Code"
+            required="true"
             [(ngModel)]="contact.address.postalCode"
             name="postalCode"
           />
@@ -125,6 +130,7 @@
             <option value="other" name="addressType">Other</option>
           </select>
         </div>
+        <em *ngIf="addressGroup.invalid && addressGroup.touched">Please enter Address</em>
       </div>
     </section>
     <section>
@@ -139,7 +145,7 @@
     </section>
     <div class="buttons">
       <button class="secondary" type="button">Cancel</button>
-      <button class="primary" type="submit">Save</button>
+      <button class="primary" type="submit" [disabled]="contactForm.invalid">Save</button>
       <button class="saving" disabled>Saving ...</button>
     </div>
   </form>
