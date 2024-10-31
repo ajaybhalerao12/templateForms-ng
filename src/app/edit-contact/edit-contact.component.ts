@@ -17,7 +17,7 @@ export class EditContactComponent implements OnInit {
     personal: false,
     firstName: '',
     lastName: '',
-    dateOfBirth: null,
+    dateOfBirth: '',
     favoritesRanking: 0,
     phone: {
       phoneNumber: '',
@@ -54,7 +54,7 @@ export class EditContactComponent implements OnInit {
 
   saveContact(form:NgForm) {
     console.log('Save contact', form.value);
-    console.log(this.contact.favoritesRanking, typeof this.contact.favoritesRanking);
+    console.log(this.contact.dateOfBirth, typeof this.contact.dateOfBirth);
     // console.log('Save contact', this.contact);
     this.contactService.saveContact(form.value).subscribe({
     // this.contactService.saveContact(this.contact).subscribe({

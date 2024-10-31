@@ -12,11 +12,11 @@ export class ContactsService {
   constructor(private http: HttpClient) { }
 
   getContact(id: string): Observable<Contact | undefined> {
-    return this.http.get<Contact>(`api/contacts/${id}`)
-      .pipe(map(c => {
-        const dob = c.dateOfBirth ? new Date(c.dateOfBirth) : null;
-        return { ...c, dateOfBirth: dob }
-      }));
+    return this.http.get<Contact>(`api/contacts/${id}`);
+      // .pipe(map(c => {
+      //   const dob = c.dateOfBirth ? new Date(c.dateOfBirth) : null;
+      //   return { ...c, dateOfBirth: dob }
+      // }));
   }
 
   getAllContacts(): Observable<Contact[]> {
@@ -31,6 +31,6 @@ export class ContactsService {
       return this.http.post<Contact>('api/contacts/', newContact, headers)
     }
     else
-      return this.http.put<Contact>('api/contacts/', contact, headers).pipe(delay(3000));
+      return this.http.put<Contact>('api/contacts/', contact, headers).pipe(delay(1000));
   }
 }

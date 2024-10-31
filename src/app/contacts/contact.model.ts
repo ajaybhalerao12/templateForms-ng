@@ -3,7 +3,7 @@ export interface Contact {
   personal:false,
   firstName: string,
   lastName: string,
-  dateOfBirth: Date | null,
+  dateOfBirth: string | null,
   favoritesRanking: number | null,
   phone: Phone,
   address: Address,
