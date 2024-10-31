@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
 export class EditContactComponent implements OnInit {
   contact: any = {
     id: '',
+    personal: false,
     firstName: '',
     lastName: '',
     dateOfBirth: null,
@@ -52,11 +53,12 @@ export class EditContactComponent implements OnInit {
 
   saveContact(form:NgForm) {
     console.log('Save contact', form.value);
+    console.log(this.contact.favoritesRanking, typeof this.contact.favoritesRanking);
     // console.log('Save contact', this.contact);
     this.contactService.saveContact(form.value).subscribe({
     // this.contactService.saveContact(this.contact).subscribe({
       next: (contact) => {
-        console.log('Contact saved', contact);
+        // console.log('Contact saved', contact);
         this.router.navigate(['/contacts']);
       },
     })

@@ -24,6 +24,7 @@ export class InMemoryContactsApi implements InMemoryDbService {
           postalCode: 'A4321',
           addressType: 'home'
         },
+        personal: false
       },
       {
         id: 'A6rwe',
@@ -39,6 +40,7 @@ export class InMemoryContactsApi implements InMemoryDbService {
           postalCode: 'F2231',
           addressType: 'other'
         },
+        personal: false
       },
       {
         id: '3bNGA',
@@ -54,6 +56,7 @@ export class InMemoryContactsApi implements InMemoryDbService {
           postalCode: 'Z2345',
           addressType: 'work'
         },
+        personal: false
       },
     ]
 

@@ -1,5 +1,6 @@
 export interface Contact {
   id: string,
+  personal:false,
   firstName: string,
   lastName: string,
   dateOfBirth: Date | null,

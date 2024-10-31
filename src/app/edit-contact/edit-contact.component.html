@@ -20,11 +20,20 @@
           [(ngModel)]="contact.dateOfBirth"
           name="dateOfBirth"
         />
-        <input
+        <input type="number"
           placeholder="Favorites Ranking"
           [(ngModel)]="contact.favoritesRanking"
           name="favoritesRanking"
+          pattern="[0-9]*"
         />
+        <div>
+          <input
+            type="checkbox"
+            [(ngModel)]="contact.personal"
+            name="personal"
+            placeholder="Personal"
+          />Personal
+        </div>
       </div>
     </section>
     <section>
@@ -100,8 +109,8 @@
     </section>
     <div class="buttons">
       <button class="secondary" type="button">Cancel</button>
-      <button  class="primary" type="submit">Save</button>
-      <button class="saving" disabled >Saving ... </button>
+      <button class="primary" type="submit">Save</button>
+      <button class="saving" disabled>Saving ...</button>
     </div>
   </form>
 </div>
