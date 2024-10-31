@@ -99,9 +99,9 @@
       </div>
     </section>
     <div class="buttons">
-      <button class="secondary" type="button">Cancel</button>
-      <button class="primary" type="submit">Save</button>
+      <button *ngIf="!contactForm.submitted" class="secondary" type="button">Cancel</button>
+      <button *ngIf="!contactForm.submitted" class="primary" type="submit">Save</button>
+      <button disabled *ngIf="contactForm.submitted" >Saving ... </button>
     </div>
   </form>
-
 </div>
