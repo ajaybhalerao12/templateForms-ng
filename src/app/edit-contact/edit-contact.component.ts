@@ -30,6 +30,7 @@ export class EditContactComponent implements OnInit {
       postalCode: '',
       addressType: '',
     },
+    notes: '',
   };
 
   constructor(private route: ActivatedRoute, private contactService: ContactsService,
